@@ -1,3 +1,499 @@
-[gd_scene format=3 uid="uid://bu736khi5iq6c"]
+[gd_scene load_steps=8 format=3 uid="uid://bu736khi5iq6c"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_wiktg"]
+size = Vector3(0.1, 0.4, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yx3o3"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wd0rj"]
+size = Vector3(0.1, 0.1, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k8b2d"]
+size = Vector3(0.35, 0.6, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5f5ed"]
+size = Vector3(0.3, 0.465, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ec3a8"]
+size = Vector3(0.3, 0.145, 0.3)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gn3rc"]
+size = Vector3(0.3, 0.3, 0.3)
+
+[node name="base_rig" type="Node3D"]
+
+[node name="base_rig" type="Node3D" parent="."]
+
+[node name="Armature" type="Node3D" parent="base_rig"]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="base_rig/Armature"]
+bones/0/name = "Root"
+bones/0/parent = -1
+bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+bones/0/enabled = true
+bones/0/position = Vector3(0, 0.4, 0)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/0/scale = Vector3(1, 1, 1)
+bones/1/name = "Spine1"
+bones/1/parent = 0
+bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+bones/1/enabled = true
+bones/1/position = Vector3(0, 0.6, 0)
+bones/1/rotation = Quaternion(0, 0, 0, 1)
+bones/1/scale = Vector3(1, 1, 1)
+bones/2/name = "Spine2"
+bones/2/parent = 1
+bones/2/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+bones/2/enabled = true
+bones/2/position = Vector3(0, 0.5, 0)
+bones/2/rotation = Quaternion(0, 0, 0, 1)
+bones/2/scale = Vector3(1, 1, 1)
+bones/3/name = "Spine3"
+bones/3/parent = 2
+bones/3/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+bones/3/enabled = true
+bones/3/position = Vector3(0, 0.5, 0)
+bones/3/rotation = Quaternion(0, 0, 0, 1)
+bones/3/scale = Vector3(1, 1, 1)
+bones/4/name = "Neck"
+bones/4/parent = 3
+bones/4/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+bones/4/enabled = true
+bones/4/position = Vector3(0, 0.5, 0)
+bones/4/rotation = Quaternion(0, 0, 0, 1)
+bones/4/scale = Vector3(1, 1, 1)
+bones/5/name = "Head"
+bones/5/parent = 4
+bones/5/rest = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0, 0.5, 0)
+bones/5/enabled = true
+bones/5/position = Vector3(0, 0.5, 0)
+bones/5/rotation = Quaternion(0, 1.19209e-07, 0, 1)
+bones/5/scale = Vector3(1, 1, 1)
+bones/6/name = "LeftClavicle"
+bones/6/parent = 2
+bones/6/rest = Transform3D(1, -7.10543e-15, 2.38419e-07, -2.26184e-07, 0.316227, 0.948683, -7.53945e-08, -0.948683, 0.316227, 0, 0.5, 0)
+bones/6/enabled = true
+bones/6/position = Vector3(0, 0.5, 0)
+bones/6/rotation = Quaternion(-0.58471, 9.67076e-08, -6.97029e-08, 0.811242)
+bones/6/scale = Vector3(1, 1, 1)
+bones/7/name = "LeftShoulder"
+bones/7/parent = 6
+bones/7/rest = Transform3D(1, 7.53945e-08, 1.22348e-08, -7.53945e-08, 0.948683, 0.316227, 1.22349e-08, -0.316227, 0.948683, -1.24345e-14, 0.316228, -5.96046e-08)
+bones/7/enabled = true
+bones/7/position = Vector3(-1.24345e-14, 0.316228, -5.96046e-08)
+bones/7/rotation = Quaternion(-0.160182, -8.54807e-15, -3.81904e-08, 0.987087)
+bones/7/scale = Vector3(1, 1, 1)
+bones/8/name = "LeftForearm"
+bones/8/parent = 7
+bones/8/rest = Transform3D(1, -7.10543e-15, -2.11758e-22, 7.10543e-15, 1, -2.98023e-08, 4.23516e-22, 2.98023e-08, 1, -7.10543e-15, 0.7, 2.98023e-08)
+bones/8/enabled = true
+bones/8/position = Vector3(-7.10543e-15, 0.7, 2.98023e-08)
+bones/8/rotation = Quaternion(1.49012e-08, -1.58819e-22, 3.55271e-15, 1)
+bones/8/scale = Vector3(1, 1, 1)
+bones/9/name = "LeftHand"
+bones/9/parent = 8
+bones/9/rest = Transform3D(1, 0, 0, 0, 1, -2.48816e-21, 0, 2.48816e-21, 1, 0, 0.5, 0)
+bones/9/enabled = true
+bones/9/position = Vector3(0, 0.5, 0)
+bones/9/rotation = Quaternion(1.24408e-21, 0, 0, 1)
+bones/9/scale = Vector3(1, 1, 1)
+bones/10/name = "RightClavicle"
+bones/10/parent = 2
+bones/10/rest = Transform3D(1, -1.42109e-14, -4.76838e-07, -4.52368e-07, 0.316227, -0.948683, 1.50789e-07, 0.948683, 0.316227, 0, 0.5, 0)
+bones/10/enabled = true
+bones/10/position = Vector3(0, 0.5, 0)
+bones/10/rotation = Quaternion(0.58471, -1.93416e-07, -1.39406e-07, 0.811242)
+bones/10/scale = Vector3(1, 1, 1)
+bones/11/name = "RightShoulder"
+bones/11/parent = 10
+bones/11/rest = Transform3D(1, 1.50789e-07, 6.2954e-08, -1.23144e-07, 0.948683, -0.316227, -1.07407e-07, 0.316227, 0.948683, 1.06581e-14, 0.316228, 5.96046e-08)
+bones/11/enabled = true
+bones/11/position = Vector3(1.06581e-14, 0.316228, 5.96046e-08)
+bones/11/rotation = Quaternion(0.160182, 4.31474e-08, -6.93791e-08, 0.987087)
+bones/11/scale = Vector3(1, 1, 1)
+bones/12/name = "RightForearm"
+bones/12/parent = 11
+bones/12/rest = Transform3D(1, -2.58163e-14, 1.65348e-21, 2.58163e-14, 1, 2.98023e-08, -2.42287e-21, -2.98023e-08, 1, -1.58687e-14, 0.7, -2.98023e-08)
+bones/12/enabled = true
+bones/12/position = Vector3(-1.58687e-14, 0.7, -2.98023e-08)
+bones/12/rotation = Quaternion(-1.49012e-08, 1.01909e-21, 1.29082e-14, 1)
+bones/12/scale = Vector3(1, 1, 1)
+bones/13/name = "RightHand"
+bones/13/parent = 12
+bones/13/rest = Transform3D(1, -1.69407e-21, -1.30881e-41, 1.69407e-21, 1, 1.54517e-20, -1.30881e-41, -1.54517e-20, 1, 9.9476e-15, 0.5, 0)
+bones/13/enabled = true
+bones/13/position = Vector3(9.9476e-15, 0.5, 0)
+bones/13/rotation = Quaternion(-7.72587e-21, 0, 8.47033e-22, 1)
+bones/13/scale = Vector3(1, 1, 1)
+bones/14/name = "RightHip"
+bones/14/parent = -1
+bones/14/rest = Transform3D(-1, 0, 3.89415e-07, 3.69431e-07, -0.316228, 0.948684, 1.23144e-07, 0.948683, 0.316228, 0, 0.4, 0)
+bones/14/enabled = true
+bones/14/position = Vector3(0, 0.4, 0)
+bones/14/rotation = Quaternion(1.57955e-07, 0.58471, 0.811242, 1.13847e-07)
+bones/14/scale = Vector3(1, 1, 1)
+bones/15/name = "RightThigh"
+bones/15/parent = 14
+bones/15/rest = Transform3D(1, -3.69431e-07, -2.6627e-07, 3.69431e-07, 0.316228, 0.948683, -2.66271e-07, -0.948683, 0.316228, 4.85849e-15, 0.316228, 0)
+bones/15/enabled = true
+bones/15/position = Vector3(4.85849e-15, 0.316228, 0)
+bones/15/rotation = Quaternion(-0.58471, 1.05104e-13, 2.27695e-07, 0.811242)
+bones/15/scale = Vector3(1, 1, 1)
+bones/16/name = "RightLeg"
+bones/16/parent = 15
+bones/16/rest = Transform3D(1, -1.16055e-14, 8.80911e-21, 1.16055e-14, 1, 2.98023e-08, -9.15498e-21, -2.98023e-08, 1, 3.84011e-15, 0.999999, 3.8743e-08)
+bones/16/enabled = true
+bones/16/position = Vector3(3.84011e-15, 0.999999, 3.8743e-08)
+bones/16/rotation = Quaternion(-1.49012e-08, 4.49102e-21, 5.80274e-15, 1)
+bones/16/scale = Vector3(1, 1, 1)
+bones/17/name = "RightFoot"
+bones/17/parent = 16
+bones/17/rest = Transform3D(0, -1, 3.89414e-07, 1, 0, 6.39758e-07, -6.39758e-07, 3.89414e-07, 1, 4.85849e-15, 0.799999, 2.98023e-08)
+bones/17/enabled = true
+bones/17/position = Vector3(4.85849e-15, 0.799999, 2.98023e-08)
+bones/17/rotation = Quaternion(-8.85099e-08, 3.63867e-07, 0.707107, 0.707107)
+bones/17/scale = Vector3(1, 1, 1)
+bones/18/name = "LeftHip"
+bones/18/parent = -1
+bones/18/rest = Transform3D(1, 0, 0, 0, -0.316228, 0.948683, 0, -0.948683, -0.316228, 0, 0.4, 0)
+bones/18/enabled = true
+bones/18/position = Vector3(0, 0.4, 0)
+bones/18/rotation = Quaternion(-0.811242, 0, 0, 0.58471)
+bones/18/scale = Vector3(1, 1, 1)
+bones/19/name = "LeftThigh"
+bones/19/parent = 18
+bones/19/rest = Transform3D(1, 0, 0, 0, 0.316228, 0.948683, 0, -0.948683, 0.316228, 0, 0.316228, 0)
+bones/19/enabled = true
+bones/19/position = Vector3(0, 0.316228, 0)
+bones/19/rotation = Quaternion(-0.58471, 0, 0, 0.811242)
+bones/19/scale = Vector3(1, 1, 1)
+bones/20/name = "LeftLeg"
+bones/20/parent = 19
+bones/20/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+bones/20/enabled = true
+bones/20/position = Vector3(0, 1, 0)
+bones/20/rotation = Quaternion(0, 0, 0, 1)
+bones/20/scale = Vector3(1, 1, 1)
+bones/21/name = "LeftFoot"
+bones/21/parent = 20
+bones/21/rest = Transform3D(0, 1, 0, -1, 0, -1.053e-07, -1.053e-07, 0, 1, 0, 0.8, 0)
+bones/21/enabled = true
+bones/21/position = Vector3(0, 0.8, 0)
+bones/21/rotation = Quaternion(3.72293e-08, 3.72293e-08, -0.707107, 0.707107)
+bones/21/scale = Vector3(1, 1, 1)
+
+[node name="IKLeftArm" type="SkeletonIK3D" parent="base_rig/Armature/Skeleton3D"]
+process_priority = 1
+root_bone = &"LeftClavicle"
+tip_bone = &"LeftHand"
+interpolation = 0.0
+target_node = NodePath("../../IKTargets/LeftArmTarget")
+
+[node name="IKRightArm" type="SkeletonIK3D" parent="base_rig/Armature/Skeleton3D"]
+process_priority = 1
+root_bone = &"RightClavicle"
+tip_bone = &"RightHand"
+interpolation = 0.0
+target_node = NodePath("../../IKTargets/RightArmTarget")
+
+[node name="IKLeftLeg" type="SkeletonIK3D" parent="base_rig/Armature/Skeleton3D"]
+process_priority = 1
+root_bone = &"LeftThigh"
+tip_bone = &"LeftFoot"
+interpolation = 0.0
+target_node = NodePath("../../IKTargets/LeftLegTarget")
+
+[node name="IKRightLeg" type="SkeletonIK3D" parent="base_rig/Armature/Skeleton3D"]
+process_priority = 1
+root_bone = &"RightThigh"
+tip_bone = &"RightFoot"
+interpolation = 0.0
+target_node = NodePath("../../IKTargets/RightLegTarget")
+
+[node name="IKTorso" type="SkeletonIK3D" parent="base_rig/Armature/Skeleton3D"]
+process_priority = 1
+root_bone = &"Root"
+tip_bone = &"Spine3"
+interpolation = 0.0
+target_node = NodePath("../../IKTargets/TorsoTarget")
+
+[node name="IKHead" type="SkeletonIK3D" parent="base_rig/Armature/Skeleton3D"]
+process_priority = 1
+root_bone = &"Neck"
+tip_bone = &"Head"
+interpolation = 0.0
+target_node = NodePath("../../IKTargets/HeadTarget")
+
+[node name="IKTargets" type="Node" parent="base_rig/Armature"]
+
+[node name="LeftArmTarget" type="Node3D" parent="base_rig/Armature/IKTargets"]
+transform = Transform3D(0.76854, 0.639801, 0, -0.639801, 0.76854, 0, 0, 0, 1, 0.834488, 1.97397, -0.886839)
+
+[node name="RightArmTarget" type="Node3D" parent="base_rig/Armature/IKTargets"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.653954, 2.13026, 0.826305)
+
+[node name="LeftLegTarget" type="Node3D" parent="base_rig/Armature/IKTargets"]
+transform = Transform3D(0.674496, 0.738279, 0, -0.738279, 0.674496, 0, 0, 0, 1, 0.934686, 0.314003, -0.322431)
+
+[node name="RightLegTarget" type="Node3D" parent="base_rig/Armature/IKTargets"]
+transform = Transform3D(0.935955, 0.35212, 0, -0.35212, 0.935955, 0, 0, 0, 1, 1.13491, 0.317247, 0.220138)
+
+[node name="TorsoTarget" type="Node3D" parent="base_rig/Armature/IKTargets"]
+transform = Transform3D(0.585269, 0.810839, 0, -0.810839, 0.585269, 0, 0, 0, 1, 0.98675, 1.74603, 0)
+
+[node name="HeadTarget" type="Node3D" parent="base_rig/Armature/IKTargets"]
+transform = Transform3D(1, 0, 0, 0, 1, 1.74846e-07, 0, -1.74846e-07, 1, 1.26207, 0.989904, 0)
+
+[node name="IKAttachments" type="Node" parent="base_rig/Armature"]
+
+[node name="LeftArm" type="Node" parent="base_rig/Armature/IKAttachments"]
+
+[node name="Clavicle" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftArm"]
+transform = Transform3D(1, -7.10543e-15, 2.38419e-07, -2.26184e-07, 0.316227, 0.948683, -7.53945e-08, -0.948683, 0.316227, 0, 2, 0)
+bone_name = "LeftClavicle"
+bone_idx = 6
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftArm/Clavicle"]
+transform = Transform3D(1, 1.42109e-14, 6.75016e-14, -2.84217e-14, 1, 5.96046e-08, 3.55271e-15, -5.96046e-08, 1, 1.65616e-09, 0.143595, -0.00694644)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Shoulder" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftArm"]
+transform = Transform3D(1, -7.10543e-15, 2.38419e-07, -2.38419e-07, -1.19209e-07, 1, 1.28786e-14, -1, -1.19209e-07, -2.88923e-14, 2.1, -0.3)
+bone_name = "LeftShoulder"
+bone_idx = 7
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftArm/Shoulder"]
+transform = Transform3D(1, 0, -5.68434e-14, 0, 1, 0, -1.53525e-21, 0, 1, 0, 0.365634, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Forearm" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftArm"]
+transform = Transform3D(1, -7.10543e-15, 2.38419e-07, -2.38419e-07, -8.9407e-08, 1, 5.77316e-15, -1, -8.9407e-08, -3.38661e-14, 2.1, -1)
+bone_name = "LeftForearm"
+bone_idx = 8
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftArm/Forearm"]
+transform = Transform3D(1, 0, -2.84217e-14, 8.47033e-22, 1, 1.42109e-14, -5.16161e-22, 0, 1, 0, 0.214426, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Hand" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftArm"]
+transform = Transform3D(1, -7.10543e-15, 2.38419e-07, -2.38419e-07, -8.9407e-08, 1, 5.77316e-15, -1, -8.9407e-08, -3.74188e-14, 2.1, -1.5)
+bone_name = "LeftHand"
+bone_idx = 9
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftArm/Hand"]
+transform = Transform3D(1, 0, -2.84217e-14, 8.47033e-22, 1, 1.42109e-14, -5.16161e-22, 0, 1, 0, 0.201533, 0)
+mesh = SubResource("BoxMesh_yx3o3")
+
+[node name="RightArm" type="Node" parent="base_rig/Armature/IKAttachments"]
+
+[node name="Clavicle" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightArm"]
+transform = Transform3D(1, -1.42109e-14, -4.76838e-07, -4.52368e-07, 0.316227, -0.948683, 1.50789e-07, 0.948683, 0.316227, 0, 2, 0)
+bone_name = "RightClavicle"
+bone_idx = 10
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightArm/Clavicle"]
+transform = Transform3D(1, 2.84217e-14, -2.55795e-13, 0, 0.999999, -5.96046e-08, -1.77636e-14, 5.96046e-08, 0.999999, 9.01423e-09, 0.170865, 0.018904)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Shoulder" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightArm"]
+transform = Transform3D(1, 0, -3.89414e-07, -3.89414e-07, -1.19209e-07, -1, -2.13163e-14, 1, -1.19209e-07, -2.22575e-14, 2.1, 0.3)
+bone_name = "RightShoulder"
+bone_idx = 11
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightArm/Shoulder"]
+transform = Transform3D(1, 0, 5.53391e-21, -1.35525e-20, 1, 0, 2.5411e-21, 0, 1, -1.13687e-13, 0.379391, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Forearm" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightArm"]
+transform = Transform3D(1, -1.42109e-14, -3.89414e-07, -3.89414e-07, -8.9407e-08, -1, 4.50002e-15, 1, -8.9407e-08, -2.65207e-14, 2.1, 1)
+bone_name = "RightForearm"
+bone_idx = 12
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightArm/Forearm"]
+transform = Transform3D(1, 3.38813e-21, 1.84228e-21, -2.5411e-21, 1, -1.42109e-14, -4.02333e-22, 0, 1, -5.68434e-14, 0.212161, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Hand" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightArm"]
+transform = Transform3D(1, -1.42109e-14, -3.89414e-07, -3.89414e-07, -8.9407e-08, -1, 4.50003e-15, 1, -8.9407e-08, -2.36786e-14, 2.1, 1.5)
+bone_name = "RightHand"
+bone_idx = 13
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightArm/Hand"]
+transform = Transform3D(1, 3.38813e-21, 1.84227e-21, -5.92923e-21, 1, -1.42109e-14, -4.02333e-22, 0, 1, 0, 0.197244, 0)
+mesh = SubResource("BoxMesh_wd0rj")
+
+[node name="LeftLeg" type="Node" parent="base_rig/Armature/IKAttachments"]
+
+[node name="Hip" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftLeg"]
+transform = Transform3D(1, 0, 0, 0, -0.316228, 0.948683, 0, -0.948683, -0.316228, 0, 0.4, 0)
+bone_name = "LeftHip"
+bone_idx = 18
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftLeg/Hip"]
+transform = Transform3D(1, 0, 0, 0, 1, 2.98023e-08, 0, -2.98023e-08, 1, 0, 0.0668634, -0.0200562)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Thigh" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftLeg"]
+transform = Transform3D(1, 0, 0, 0, -1, -5.96046e-08, 0, 5.96046e-08, -1, 0, 0.3, -0.3)
+bone_name = "LeftThigh"
+bone_idx = 19
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftLeg/Thigh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.321991, 2.98023e-08)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Leg" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftLeg"]
+transform = Transform3D(1, 0, 0, 0, -1, -5.96046e-08, 0, 5.96046e-08, -1, 0, -0.7, -0.3)
+bone_name = "LeftLeg"
+bone_idx = 20
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftLeg/Leg"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.308114, 2.98023e-08)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Foot" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/LeftLeg"]
+transform = Transform3D(0, 1, 0, 1, 0, 4.56956e-08, 4.56956e-08, 0, -1, 0, -1.5, -0.3)
+bone_name = "LeftFoot"
+bone_idx = 21
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/LeftLeg/Foot"]
+transform = Transform3D(1, 0, -1.42109e-14, 0, 1, 0, 1.42109e-14, 0, 1, 0, 0.189624, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="RightLeg" type="Node" parent="base_rig/Armature/IKAttachments"]
+
+[node name="Hip" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightLeg"]
+transform = Transform3D(-1, 0, 3.89415e-07, 3.69431e-07, -0.316228, 0.948684, 1.23144e-07, 0.948683, 0.316228, 0, 0.4, 0)
+bone_name = "RightHip"
+bone_idx = 14
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightLeg/Hip"]
+transform = Transform3D(1, -1.06581e-13, 2.16716e-13, 0, 1, -2.98023e-07, 1.03029e-13, 8.9407e-08, 1, -1.08567e-08, 0.0612472, -0.0278798)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Thigh" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightLeg"]
+transform = Transform3D(-1, 2.84217e-14, 3.89414e-07, -2.55795e-13, -1, 9.23872e-07, 3.89414e-07, 2.98023e-07, 1, -4.85849e-15, 0.3, 0.3)
+bone_name = "RightThigh"
+bone_idx = 15
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightLeg/Thigh"]
+transform = Transform3D(1, 0, 0, -1.89735e-19, 1, 0, 1.98952e-13, 0, 1, -1.42109e-14, 0.297007, -8.9407e-08)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Leg" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightLeg"]
+transform = Transform3D(-1, 2.84217e-14, 3.89414e-07, -2.67401e-13, -1, 8.9407e-07, 3.89414e-07, 2.68221e-07, 1, 3.48102e-14, -0.7, 0.3)
+bone_name = "RightLeg"
+bone_idx = 16
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightLeg/Leg"]
+transform = Transform3D(1, -6.77626e-21, 0, 5.42101e-20, 1, -1.13687e-13, 5.68434e-14, -5.68434e-14, 1, -3.55271e-14, 0.377602, -1.49012e-07)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Foot" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/RightLeg"]
+transform = Transform3D(-2.20709e-13, 1, 2.84217e-13, -1, 6.15564e-13, 2.54311e-07, -3.71537e-07, -2.84217e-14, 1, 6.42945e-14, -1.5, 0.300001)
+bone_name = "RightFoot"
+bone_idx = 17
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/RightLeg/Foot"]
+transform = Transform3D(1, -7.22796e-21, 0, 5.13871e-20, 1, 0, -1.13687e-13, 0, 1, 0, 0.203924, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Torso" type="Node" parent="base_rig/Armature/IKAttachments"]
+
+[node name="UpperSpine" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/Torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+bone_name = "Spine3"
+bone_idx = 3
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/Torso/UpperSpine"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.11097, 0)
+mesh = SubResource("BoxMesh_k8b2d")
+
+[node name="MidSpine" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/Torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+bone_name = "Spine2"
+bone_idx = 2
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/Torso/MidSpine"]
+mesh = SubResource("BoxMesh_5f5ed")
+
+[node name="LowerSpine" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/Torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+bone_name = "Spine1"
+bone_idx = 1
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/Torso/LowerSpine"]
+mesh = SubResource("BoxMesh_5f5ed")
+
+[node name="Root" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/Torso"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+bone_name = "Root"
+bone_idx = 0
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/Torso/Root"]
+mesh = SubResource("BoxMesh_ec3a8")
+
+[node name="Head" type="Node" parent="base_rig/Armature/IKAttachments"]
+
+[node name="Neck" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5, 0)
+bone_name = "Neck"
+bone_idx = 4
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/Head/Neck"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.209172, 0)
+mesh = SubResource("BoxMesh_wiktg")
+
+[node name="Head" type="BoneAttachment3D" parent="base_rig/Armature/IKAttachments/Head"]
+transform = Transform3D(1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0, 3, 0)
+bone_name = "Head"
+bone_idx = 5
+use_external_skeleton = true
+external_skeleton = NodePath("../../../Skeleton3D")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="base_rig/Armature/IKAttachments/Head/Head"]
+transform = Transform3D(1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, 0, -0.203799, 0)
+mesh = SubResource("BoxMesh_gn3rc")
