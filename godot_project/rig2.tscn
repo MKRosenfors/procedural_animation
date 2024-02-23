@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bu736khi5iq6c"]
+[gd_scene load_steps=15 format=3 uid="uid://bsxx8bu64eqxq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qoqqv"]
 size = Vector3(0.1, 0.5, 0.1)
@@ -428,9 +428,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.423412, 2.98023e-08)
 mesh = SubResource("BoxMesh_ygvmi")
 
 [node name="Heel" type="BoneAttachment3D" parent="base_rig/Armature/Skeleton3D/IKAttachments/LeftLeg"]
-transform = Transform3D(0, 1, 0, 1, 0, 1.58934e-08, 1.58934e-08, 0, -1, 0, -1.8, -0.3)
+transform = Transform3D(4.37114e-08, 1, -8.74228e-08, 1, -4.37114e-08, 1.58934e-08, 1.58934e-08, -8.74228e-08, -1, 0, -1.8, -0.3)
 bone_name = "LeftHeel"
 bone_idx = 23
+override_pose = true
 use_external_skeleton = true
 external_skeleton = NodePath("../../..")
 
@@ -439,7 +440,7 @@ transform = Transform3D(1, -1.19209e-07, 0, 1.04308e-07, 1, 0, 0, 0, 1, -0.03830
 mesh = SubResource("BoxMesh_wiktg")
 
 [node name="Bool" type="BoneAttachment3D" parent="base_rig/Armature/Skeleton3D/IKAttachments/LeftLeg"]
-transform = Transform3D(0, 1, 0, 1, 0, 1.58934e-08, 1.58934e-08, 0, -1, 0.1, -1.8, -0.3)
+transform = Transform3D(0.995747, -0.0918238, 0.00367484, -0.0918088, -0.995749, -0.00402926, 0.00402929, 0.00367484, -0.999961, 0.225919, -1.87189, -0.31498)
 visible = false
 bone_name = "LeftBall"
 bone_idx = 24
@@ -450,7 +451,7 @@ external_skeleton = NodePath("../../..")
 mesh = SubResource("BoxMesh_wiktg")
 
 [node name="Toe" type="BoneAttachment3D" parent="base_rig/Armature/Skeleton3D/IKAttachments/LeftLeg"]
-transform = Transform3D(0, 1, 0, 1, 0, 1.58934e-08, 1.58934e-08, 0, -1, 0.2, -1.8, -0.3)
+transform = Transform3D(-0.225308, 0.974287, 0, -0.974288, -0.225308, 0, 0, 0, 1, 0.216737, -1.97147, -0.314613)
 visible = false
 bone_name = "LeftToe"
 bone_idx = 25
@@ -496,9 +497,10 @@ transform = Transform3D(1, -4.65868e-20, 5.68434e-14, 1.69407e-20, 1, -9.9476e-1
 mesh = SubResource("BoxMesh_6t521")
 
 [node name="Heel" type="BoneAttachment3D" parent="base_rig/Armature/Skeleton3D/IKAttachments/RightLeg"]
-transform = Transform3D(7.0039e-13, 1, 1.08002e-12, -1, 9.031e-13, -6.99363e-07, -5.80154e-07, -1.08002e-12, 1, 2.24413e-12, -1.8, 0.3)
+transform = Transform3D(-4.37114e-08, 1, 1.08003e-12, -1, -4.37114e-08, -5.80154e-07, -5.80154e-07, -1.10538e-12, 1, 2.24413e-12, -1.8, 0.3)
 bone_name = "RightHeel"
 bone_idx = 17
+override_pose = true
 use_external_skeleton = true
 external_skeleton = NodePath("../../..")
 
@@ -507,7 +509,8 @@ transform = Transform3D(1, -2.98023e-08, 0, 2.98023e-08, 1, 0, -1.13687e-13, 0, 
 mesh = SubResource("BoxMesh_wiktg")
 
 [node name="Ball" type="BoneAttachment3D" parent="base_rig/Armature/Skeleton3D/IKAttachments/RightLeg"]
-transform = Transform3D(7.0039e-13, 1, 1.02318e-12, -1, 9.031e-13, -6.99362e-07, -5.80153e-07, -1.02318e-12, 1, 0.1, -1.8, 0.3)
+transform = Transform3D(0.981099, 0.193351, 0.00317143, -0.193359, 0.981099, 0.00260732, -0.00260736, -0.00317127, 0.999992, 0.303191, -1.02846, 0.301585)
+visible = false
 bone_name = "RightBall"
 bone_idx = 18
 use_external_skeleton = true
@@ -518,7 +521,8 @@ transform = Transform3D(1, -7.22796e-21, 0, 5.13871e-20, 1, 0, -1.13687e-13, 0, 
 mesh = SubResource("BoxMesh_wiktg")
 
 [node name="Toe" type="BoneAttachment3D" parent="base_rig/Armature/Skeleton3D/IKAttachments/RightLeg"]
-transform = Transform3D(7.0039e-13, 1, 1.02318e-12, -1, 9.031e-13, -6.99362e-07, -5.80153e-07, -1.02318e-12, 1, 0.2, -1.8, 0.3)
+transform = Transform3D(-0.225308, 0.974287, 0, -0.974287, -0.225308, 0, 0, 0, 1, 0.322526, -0.930348, 0.301268)
+visible = false
 bone_name = "RightToe"
 bone_idx = 19
 use_external_skeleton = true
